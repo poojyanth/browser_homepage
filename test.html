@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form onsubmit="getData(); return false;">
+      <label for="query">Search query:</label>
+      <input type="text" id="query" name="query" />
+      <button type="submit">Search</button>
+    </form>
+    <div id="results"></div>
+
+    <script>
+        document.getElementById("query").addEventListener("keyup", getData);
+        document.getElementById("query").addEventListener("keydown", getData);
+
+      // function to get data from an API
+      function getData() {
+        // get the value of the input field
+        var query = document.getElementById("query").value;
+        // make the HTTP GET request to the remote API
+        let url =
+          `https://www.googleapis.com/customsearch/v1?q=${query}&key=AIzaSyCRPgAbzyhF4xgbEOMUt0mpTxUh5gIrp5E&num=10&cx=633dfa74e922f4162&alt=json`;
+          console.log(url);
+        fetch(url)
+          .then((response) => response.json())
+          .then((data) => {
+            // log the response to the console
+            let html = '<ul>';
+            data.items.forEach(element => {
+                console.log(element.title);
+                html += `<li><a href='${element.link}'>${element.title}</a></li>`;            
+                
+            });
+            html += '</ul>';
+            // render the data in the DOM
+            document.getElementById("results").innerHTML = html;
+          });
+      }
+    </script>
+  </body>
+</html>

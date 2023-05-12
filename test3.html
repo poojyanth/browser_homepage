@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>API Example</title>
+  </head>
+  <body>
+    <h1>API Example</h1>
+    <div id="res"></div>
+
+    <!-- script to read the data from a .txt file response -->
+    <script>
+    //   // make the HTTP GET request to the remote API
+    //   fetch("https://www.google.com/complete/search?q=coffee&client=chrome&gl=in&num=10",{mode: 'no-cors'})
+    //     .then((res) => res.text())
+    //     .then((data) => {
+    //         console.log(res);
+    //         console.log(data);
+    //       // log the response to the console
+    //       console.log(data);
+    //       // render the data in the DOM
+    //       document.getElementById("response").innerHTML = data;
+    //     }); 
+
+//     fetch('https://www.google.com/complete/search?q=coffee&client=chrome&gl=in&num=10', {mode: 'no-cors'})
+//   .then(data => {
+//     data = data.text();
+//     console.log(data);
+//     const regex = /([^{]+)\n/g;
+//     const matches = regex.exec(data);
+//     if (matches && matches.length > 1) {
+//       const json = JSON.parse(matches[1]);
+//       console.log(json);
+//       // handle data
+//     } else {
+//         data = JSON.parse(data);
+//         console.log(data);
+//       throw new Error('Invalid response format');
+//     }
+//   })
+//   .catch(error => {
+//     console.error(error);
+//     // handle error
+//   });
+    // Example POST method implementation:
+// async function postData(url ) {
+//   // Default options are marked with *
+//   const response = await fetch(url, {
+//     method: "GET", // *GET, POST, PUT, DELETE, etc.
+//      });
+//   return response.json(); // parses JSON response into native JavaScript objects
+// }
+
+// postData("https://www.google.com/complete/search?q=coffee&client=chrome&gl=in").then((data) => {
+//   console.log(data); // JSON data parsed by `data.json()` call
+// });
+
+fetch('https://www.google.com/complete/search?q=coffee&client=chrome&gl=in&key=AIzaSyDth4OEaubs3XwY9W6HkfM5qm6AJ8Yo5lg', {mode: 'no-cors',method: 'GET'})
+    .then(response => console.log(response))
+
+    
+    </script>
+
+
+    
+  </body>
+</html>

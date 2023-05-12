@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="https://www.google.com/search" id="searchinputform">
+      <label for="query">Search query:</label>
+      <input type="text" id="query" name="q" />
+      <button type="submit">Search</button>
+    </form>
+    <div id="results"></div>
+
+    <script>
+      // function to get data from an API
+      document.getElementById("query").addEventListener("keyup", getData);
+      function getData() {
+        // get the value of the input field
+        var query = document.getElementById("query").value;
+        // make the HTTP GET request to the remote API
+        let url =
+          `https://api.datamuse.com/words?sp=${query}*&max=10`;
+          console.log(url);
+        fetch(url)
+          .then((response) => response.json())
+          .then((data) => {
+            // log the response to the console
+            let html = '<ul>';
+            data.forEach(element => {
+                html += `<li><a href='https://www.google.com/search?q=${element.word}'>${element.word}</a></li>`
+                
+            });
+            html += '</ul>';
+            // render the data in the DOM
+            document.getElementById("results").innerHTML = html;
+          });
+      }
+    </script>
+  </body>
+</html>
