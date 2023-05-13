@@ -59,7 +59,8 @@ document.getElementById('input').addEventListener('input',suggest);
             };
 
             input.onblur = function () {
-                console.log('blur input');            
+                console.log('blur input');         
+                searchresults.style.display = 'none';     
             input.style.borderRadius = "5px";
             
             };
@@ -141,3 +142,32 @@ document.getElementById('input').addEventListener('input',suggest);
                   x[i].classList.remove("active");
                 }
               }
+
+            //   var currentTimeElement = document.getElementById('time');
+            //   var currentTime = new Date();
+            //   currentTimeElement.textContent = currentTime.toLocaleTimeString();
+              
+                      
+            var clock = document.getElementById('clock');
+            var time = clock.querySelector('.time');
+            var date = clock.querySelector('.date');
+            var text = clock.querySelector('.text');
+            
+            var week = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+            var timerID = setInterval(updateTime, 1000);
+            updateTime();
+            
+            function updateTime() {
+                var cd = new Date();
+                time.textContent = zeroPadding(cd.getHours(), 2) + ':' + zeroPadding(cd.getMinutes(), 2) + ':' + zeroPadding(cd.getSeconds(), 2);
+                date.textContent = zeroPadding(cd.getFullYear(), 4) + '-' + zeroPadding(cd.getMonth()+1, 2) + '-' + zeroPadding(cd.getDate(), 2) + ' ' + week[cd.getDay()];
+            };
+            
+            function zeroPadding(num, digit) {
+                var zero = '';
+                for(var i = 0; i < digit; i++) {
+                    zero += '0';
+                }
+                return (zero + num).slice(-digit);
+            }
+            
