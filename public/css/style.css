@@ -4,7 +4,7 @@ html,body{
 }
 .page1{
     height: 100vh;
-    width: 100%;
+    width: 100vw;
 }
 #query{
     position: relative;
@@ -52,7 +52,7 @@ font-size: 18px;
 padding: 5px;
 height: 35px;
 width: 35vw;
-border: 1px solid #ff006f84;
+border: 1px solid #3a8bfc84;
 outline: none;
 border-radius: 5px;
 color: rgb(8, 8, 33);
