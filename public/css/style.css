@@ -1,10 +1,32 @@
 html,body{
     margin: 0;
     height: 100%;
+    max-width: 100vw;
+    width: 100vw;
 }
 .page1{
+    background: radial-gradient(circle at right bottom, #28427b, #286790, #28427b);
+    display: flex;
     height: 100vh;
     width: 100vw;
+}
+.image-holder{
+    height: 100vh;
+    width: 100vw;
+    overflow:hidden;
+    position: absolute;
+}
+.leftpane{
+    width: 50%;
+}
+.rightpane{
+    width: 50%;
+    overflow: hidden;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 #query{
     position: relative;
@@ -141,3 +163,36 @@ p {
     padding: 20px 0 0;
   }
   
+
+/* book marks */
+
+  .bookmark{
+    margin: 1%;
+    position: relative;
+    
+  }
+
+  .bookmark-link{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font: 1.1em 'Roboto', sans-serif;
+  }
+
+  .bookmark-icon{
+    width: 50px;
+}
+
+.bookmark-icon-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      background-color: cadetblue;
+  }
+
