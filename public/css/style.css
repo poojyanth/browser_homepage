@@ -7,14 +7,70 @@ html,body{
 .page1{
     background: radial-gradient(circle at right bottom, #28427b, #286790, #28427b);
     display: flex;
-    height: 100vh;
+    
     width: 100vw;
 }
 
 @media (max-width : 971px) {
     .page1{
         flex-direction: column;
+        height: auto;
     }    
+    .leftpane{
+        width: 100%;
+    }
+    .rightpane{
+        width: 100%;
+    }
+    #clock{
+        width: 100%;
+    }
+    #searchinputform{
+        width: 100%;
+    }
+    .circle-ai-container{
+        left: 0;
+    }
+    #input{
+        width: 100%;
+    }
+    #searchresults{
+        width: 50%;
+    }
+    fieldset{
+        width: 100%;
+    }
+}
+
+@media (min-width : 971px) {
+    .page1{
+        flex-direction: row;
+        height: 100vh;
+    }    
+    .leftpane{
+        width: 50%;
+    }
+    .rightpane{
+        width: 50%;
+    }
+    #clock{
+        width: 50%;
+    }
+    #searchinputform{
+        width: 50%;
+    }
+    .circle-ai-container{
+        left:25vw;
+    }
+    #input{
+        width: 35vw;
+    }
+    #searchresults{
+        width: 35vw;
+    }
+    fieldset{
+        width: fit-content;
+    }
 }
 .image-holder{
     height: 100vh;
@@ -25,10 +81,8 @@ html,body{
 .leftpane{
     overflow: hidden;
     height: 100vh;
-    width: 50%;
 }
 .rightpane{
-    width: 50%;
     overflow: hidden;
     padding: 5px;
     display: flex;
@@ -63,13 +117,12 @@ background-color: #f2f2f2;
 }
 fieldset {
 border:none;
-width: fit-content;
 border-radius: 5px;
 display: flex;
 }
 
 #searchinputform{
-    width: 50%;
+    
     display: flex;
     justify-content: center;
     position: absolute;
@@ -77,11 +130,11 @@ display: flex;
 }
 
 
-input {
+#input {
 font-size: 18px;
 padding: 5px;
 height: 35px;
-width: 35vw;
+
 border: 1px solid #3a8bfc84;
 outline: none;
 border-radius: 5px;
@@ -94,7 +147,7 @@ color: rgb(8, 8, 33);
     width: 45px;
     border-radius: 50%;
 }
-datalist {
+#searchresults {
 position: absolute;
 top: 50px;
 background-color: white;
@@ -102,9 +155,8 @@ border: 1px solid #ff006f84;
 border-radius: 0 0 5px 5px;
 border-top: none;
 font-family: sans-serif;
-width: 35vw;
 padding: 5px;
-
+margin: 0;
 max-height: 38vh;
 overflow-y: auto;
 
@@ -151,7 +203,6 @@ p {
     display: flex;
     height: 50%;
     /* margin: 10% auto; */
-    width: 50%;
     /* transform: translate(-50%, -50%); */
     color: #daf6ff;
     text-shadow: 0 0 20px rgba(10, 175, 230, 1), 0 0 20px rgba(10, 175, 230, 0);
@@ -160,17 +211,12 @@ p {
   }
   #clock .time {
     letter-spacing: 0.05em;
-    font-size: 5.5rem;
+    font-size: 500%;
     padding: 5px 0;
   }
   #clock .date {
     letter-spacing: 0.1em;
-    font-size: 1.5rem;
-  }
-  #clock .text {
-    letter-spacing: 0.1em;
-    font-size: 1.5rem;
-    padding: 20px 0 0;
+    font-size: 150%;
   }
   
 
@@ -211,7 +257,7 @@ p {
 
   /* background image */
   .circle-ai-container {
-    left:25vw;
+    
     display: flex;
     
     position: relative;
