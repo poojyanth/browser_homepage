@@ -298,6 +298,10 @@ p {
 
   }
 
+  .circle-ai:hover {
+    animation-play-state:paused;
+  }
+
   .circle-center{
     position: absolute;
     opacity: 0.6;
