@@ -35,7 +35,7 @@ html,body{
         width: 100%;
     }
     #searchresults{
-        width: 50%;
+        width: 80%;
     }
     fieldset{
         width: 100%;
@@ -151,7 +151,7 @@ color: rgb(8, 8, 33);
 position: absolute;
 top: 50px;
 background-color: white;
-border: 1px solid #ff006f84;
+border: 1px solid #ffffff84;
 border-radius: 0 0 5px 5px;
 border-top: none;
 font-family: sans-serif;
