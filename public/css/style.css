@@ -7,26 +7,33 @@ html,body{
 .page1{
     background: radial-gradient(circle at right bottom, #28427b, #286790, #28427b);
     display: flex;
+    background-repeat: repeat;
     
-    width: 100vw;
 }
 
 @media (max-width : 971px) {
     .page1{
         flex-direction: column;
-        height: auto;
+        width: 100%;
+        height: 100%;
     }    
     .leftpane{
         width: 100%;
+        min-height: 50vh;
+        height: max-content;
     }
     .rightpane{
+        position: absolute;
         width: 100%;
+        top: 70%;
     }
     #clock{
+        top: 25%;
         width: 100%;
     }
     #searchinputform{
         width: 100%;
+        top: 50%;
     }
     .circle-ai-container{
         left: 0;
@@ -35,6 +42,7 @@ html,body{
         width: 100%;
     }
     #searchresults{
+        z-index: 5;
         width: 80%;
     }
     fieldset{
@@ -55,15 +63,18 @@ html,body{
     }    
     .leftpane{
         width: 50%;
+        height: 100vh;
     }
     .rightpane{
         width: 50%;
     }
     #clock{
+        display: flex;
         width: 50%;
     }
     #searchinputform{
         width: 50%;
+        top: 50%;
     }
     .circle-ai-container{
         left:25vw;
@@ -86,7 +97,7 @@ html,body{
 }
 .leftpane{
     overflow: hidden;
-    height: 100vh;
+    
 }
 .rightpane{
     overflow: hidden;
@@ -132,7 +143,6 @@ display: flex;
     display: flex;
     justify-content: center;
     position: absolute;
-    top: 50%;
 }
 
 
@@ -206,7 +216,7 @@ p {
     font-family: 'Share Tech Mono', monospace;
     text-align: center;
     position: absolute;
-    display: flex;
+    
     height: 50%;
     /* margin: 10% auto; */
     /* transform: translate(-50%, -50%); */
@@ -217,7 +227,7 @@ p {
   }
   #clock .time {
     letter-spacing: 0.05em;
-    font-size: 500%;
+    font-size: calc(min(500%, 4rem));
     padding: 5px 0;
   }
   #clock .date {
