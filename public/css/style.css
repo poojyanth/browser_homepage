@@ -17,6 +17,8 @@ html,body{
     position: absolute;
 }
 .leftpane{
+    overflow: hidden;
+    height: 100vh;
     width: 50%;
 }
 .rightpane{
@@ -97,7 +99,7 @@ font-family: sans-serif;
 width: 35vw;
 padding: 5px;
 
-max-height: 15rem;
+max-height: 38vh;
 overflow-y: auto;
 
 }
