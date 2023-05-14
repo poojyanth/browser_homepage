@@ -58,12 +58,12 @@ document.getElementById('input').addEventListener('input',suggest);
             
             };
 
-            input.onblur = function () {
-                console.log('blur input');         
-                searchresults.style.display = 'none';     
-            input.style.borderRadius = "5px";
+            // input.onblur = function () {
+            //     console.log('blur input');         
+            //     searchresults.style.display = 'none';     
+            // input.style.borderRadius = "5px";
             
-            };
+            // };
 
             searchresults.addEventListener('click', function(e) {
                 input.value = e.target.value;
