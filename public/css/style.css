@@ -30,6 +30,7 @@ html,body{
     .rightpane{
         position: absolute;
         width: 100%;
+        padding: 5px;
         top: 70%;
     }
     #clock{
@@ -74,7 +75,8 @@ html,body{
         height: 100vh;
     }
     .rightpane{
-        width: 50%;
+      padding: 0 10vw;
+        width: calc(50% - 20vw);
     }
     #clock{
         display: flex;
@@ -109,10 +111,11 @@ html,body{
 }
 .rightpane{
     overflow: hidden;
-    padding: 5px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
     align-items: center;
 }
 #query{

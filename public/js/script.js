@@ -171,3 +171,54 @@ document.getElementById('input').addEventListener('input',suggest);
                 return (zero + num).slice(-digit);
             }
             
+
+            // add book mark            
+            var rightpane = document.getElementById('rightpane');
+            var bookmar = (localStorage.getItem('bookmarks'));
+            if(!bookmar) {
+                var bookmarks = [
+                    {
+                        address: 'https://www.google.com',
+                        title: 'Google'
+                    }
+                ];
+                localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+            }
+            var bookmarks = JSON.parse(localStorage.getItem('bookmarks') || "") || [''];
+            bookmarks.forEach(function(bookmark) {
+                var div = document.createElement('div');
+                div.className = 'bookmark';
+                div.innerHTML ='<a class="bookmark-link" href="' + bookmark.address + '" target="_blank"><div class="bookmark-icon-container"><img class="bookmark-icon" width="50px" src="https://www.google.com/s2/favicons?domain='+bookmark.address+'&sz=256" alt=""></div><p class="bookmark-name">' + bookmark.title + '</p></a>';
+                rightpane.appendChild(div);
+            });
+            rightpane.innerHTML += '<div id="add-bookmark" class="bookmark"><a class="bookmark-link add-bookmark" id="add-bookmark"><div class="bookmark-icon-container"><i class="fas fa-plus"></i></div><p class="bookmark-name">Add</p></a></div>';
+            var addbookmark = document.getElementById('add-bookmark');
+            addbookmark.addEventListener('click', function(e) {        
+                console.log('click');
+                var address = prompt("Please enter the address of the bookmark", "https://www.google.com");
+                var title = prompt("Please enter the title of the bookmark", "Google");
+                console.log(address);
+                console.log(title);
+                var bookmark1 = {
+                    address: address,
+                    title: title
+                }
+                var bookmarks = JSON.parse(localStorage.getItem('bookmarks') || "") || [''];
+                console.log(bookmarks);
+                if(bookmark1.address != null && bookmark1.title != null)
+                bookmarks.push(bookmark1);
+                localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+                console.log(bookmark1);
+                rightpane.innerHTML = '';
+                bookmarks.forEach(function(bookmark) {
+                    var div = document.createElement('div');
+                    div.className = 'bookmark';
+                    div.innerHTML ='<a class="bookmark-link" href="' + bookmark.address + '" target="_blank"><div class="bookmark-icon-container"><img class="bookmark-icon" width="50px" src="https://www.google.com/s2/favicons?domain='+bookmark.address+'&sz=256" alt=""></div><p class="bookmark-name">' + bookmark.title + '</p></a>';
+                    rightpane.appendChild(div);
+                }
+                );
+                rightpane.innerHTML += '<div class="bookmark"><a class="bookmark-link add-bookmark" id="add-bookmark"><div class="bookmark-icon-container"><i class="fas fa-plus"></i></div><p class="bookmark-name">Add</p></a></div>';
+            });
+                
+
+
