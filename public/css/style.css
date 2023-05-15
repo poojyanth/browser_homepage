@@ -280,6 +280,25 @@ p {
       background-color: cadetblue;
   }
 
+  .delete-bookmark {
+    display: none;
+    border: none;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.384);
+    position: absolute;
+    height: 23px;
+    width: 23px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .bookmark:hover .delete-bookmark {
+    display: block;
+  }
+  
+
 
 
 
