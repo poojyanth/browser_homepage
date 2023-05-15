@@ -4,24 +4,139 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <style>
+        .page1{
+            overflow-x:hidden;
+            max-width: 100vw;
+        }
+        .ai-vector-image{
+            position: relative;
+            height: 90vh;
+            width: 90vh;
+            z-index: 0;
+            left: 70%;
+            top: 50%;
+            overflow: hidden;
+            opacity: 0.9;
+            /* background-image: url("public/images/ai vector23.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center; */
+            animation: rotate 5s linear infinite;
+
+        }
+        @keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+    </style>
     <title>Homepage</title>
 </head>
 <body>
-  <form action="#"  method="post" id="searchinputform">
-    <fieldset style="display: flex; flex-direction: row;">
-        <input required autocomplete="off" role="combobox" list="" id="input" name="q" placeholder="Search Google">        
-        <button type="submit" id="searchbutton" ><i class="fa-solid fa-lg fa-magnifying-glass"></i></button>
-        <br>
-        <datalist id="searchresults" role="listbox">
-            
-        </datalist>       
-    </fieldset>
-</form>
+    
+    <section class="page1">
+        <div class="line" style="top:20vh;">
+            <div class="data data3"></div>
+            <div class="data data2"></div>
+          </div>   
+          <div class="line" style="top:25vh;">
+            <div class="data data1"></div>
+          </div>   
+          <div class="line" style="top:15vh;">
+            <div class="data data4"></div>
+            <div class="data data5"></div>
+          </div>
+          <div class="line" style="top:10vh;">
+            <div class="data data1"></div>
+          </div>
+          <div class="line" style="top:70vh;">
+            <div class="data data4"></div>
+            <div class="data data2"></div>
+            <div class="data data5"></div>
+          </div>   
+          <div class="line" style="top:75vh;">
+            <div class="data data3"></div>
+            <div class="data data1"></div>
+          </div>          
+          <div class="line" style="top:80vh;">
+            <div class="data data2"></div>
+            <div class="data data5"></div>
+            </div>
+            <div class="line" style="top:85vh;">
+                <div class="data data3"></div>
+                <div class="data data1"></div>
+                <div class="data data4"></div>
+            </div>
+            <div class="line" style="top:90vh;">
+                <div class="data data2"></div>
+                <div class="data data5"></div>
+                <div class="data data3"></div>
+            </div>
+            <div class="vertical-line">
+                <div class="vdata vertical1" style="top:45vh"></div>
+                <div class="vdata vertical2"></div>
+                <div class="vdata vertical3"></div>
+                <div class="vdata vertical4"></div>
+                <div class="vdata vertical5"></div>
+            </div>
+        <div class="image-holder">
+            <!-- <section class="ai-vector-image">
+                <img style="height: 90vh" src="public/images/circle art 1.png" alt="">
+            </section> -->
+            <div class="circle-ai-container">
+                <div class="circle-ai circle-center"></div>
+                <div class="circle-ai circle3"></div>
+                <div class="circle-ai circle4"></div>
+                <div class="circle-ai circle2"></div>
+                <div class="circle-ai circle1"></div>
+                <!--   <div class="line line-top"></div>
+                <div class="line line-right"></div>
+                <div class="line line-bottom"></div>
+                <div class="line line-left"></div> -->
+              </div>
+              
+        </div>
+        <div class="leftpane">
+            <div id="clock">
+                <p class="date"></p>
+                <p class="time"></p>        
+            </div>
+            <form action="#"  method="post" id="searchinputform">
+                <fieldset style="display: flex; flex-direction: row;">
+                    <input required autocomplete="off" role="combobox" list="" id="input" name="q" placeholder="Search Google">        
+                    <button type="submit" id="searchbutton" ><i class="fa-solid fa-lg fa-magnifying-glass"></i></button>
+                    <br>
+                    <datalist id="searchresults" role="listbox" class="style-1">
+                    
+                    </datalist>       
+                </fieldset>
+            </form>
+        </div>
+        <div class="rightpane">
+            <!-- google favicon logo link -->
+            <div class="bookmark">
+                <a class="bookmark-link" href="https://www.google.com" target="_blank">
+                    <div class="bookmark-icon-container"><img class="bookmark-icon" width="50px" src="https://www.google.com/s2/favicons?domain=www.google.com&sz=256" alt="Google"></div>
+                    <p class="bookmark-name">Google</p>
+                </a>
+            </div>
+            <div class="bookmark">
+                <a class="bookmark-link" href="https://www.instagram.com" target="_blank">
+                    <div class="bookmark-icon-container"><img class="bookmark-icon" src="https://www.google.com/s2/favicons?domain=www.instagram.com&sz=256" alt="Instgram"></div>
+                    <p class="bookmark-name">Instagram</p>
+                </a>
+            </div>
+        </div>
+    </section>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/js/all.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="public/js/script.js"></script>
 </body>
 </html>
