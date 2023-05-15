@@ -7,7 +7,9 @@ searchbutton.addEventListener('click', function(e) {
     e.preventDefault();
     console.log('searchbutton');
     if(input.value != '') {
-        window.location.href = "https://www.google.com/search?q=" + input.value;
+        var text = input.value;
+        input.value = '';
+        window.location.href = "https://www.google.com/search?q=" + text;
     }
 });
 
@@ -70,7 +72,9 @@ document.getElementById('input').addEventListener('input',suggest);
                 searchresults.style.display = 'none';
                 input.style.borderRadius = "5px";
                 console.log('click');
-                window.location.href = "https://www.google.com/search?q=" + input.value; 
+                var text = input.value;
+                input.value = '';
+                window.location.href = "https://www.google.com/search?q=" + text; 
             });
 
 
