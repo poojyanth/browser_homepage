@@ -299,7 +299,7 @@ p {
 
   }
 
-  .circle-ai:hover {
+  .circle1:hover, .circle3:hover, .circle4:hover{
     animation-play-state:paused;
   }
 
