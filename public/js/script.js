@@ -23,7 +23,7 @@ else {
 document.getElementById('input').addEventListener('input',suggest);        
         function suggest(){
             console.log(document.getElementById('input').value);
-            fetch('https://searchsuggestionapinodejs.herokuapp.com/suggest/' + encodeURIComponent(document.getElementById('input').value))
+            fetch('https://searchsuggestionapinodejs.com/suggest/' + encodeURIComponent(document.getElementById('input').value))
             .then(response => response.json())
             .then(data => {
             console.log(data);
