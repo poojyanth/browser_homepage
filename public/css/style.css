@@ -106,7 +106,7 @@ html,body{
     position: absolute;
 }
 #b0{
-  background-image: url("/public/images/moonwallpaper.png");
+  background-image: url("public/images/moonwallpaper.png");
   object-fit: contain;
   background-position: right center;
   background-size: cover;
