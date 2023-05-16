@@ -244,7 +244,7 @@ document.getElementById('input').addEventListener('input',suggest);
                   var div = document.createElement('div');
                   div.className = 'bookmark';
                   div.innerHTML = `
-                    <a class="bookmark-link" href="${bookmark.address}" target="_blank">
+                    <a class="bookmark-link" href="${bookmark.address}" >
                       <div class="bookmark-icon-container">
                         <img class="bookmark-icon" width="50px" src="https://www.google.com/s2/favicons?domain=${bookmark.address}&sz=256" alt="">
                       </div>
