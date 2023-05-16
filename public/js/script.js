@@ -23,7 +23,7 @@ else {
 document.getElementById('input').addEventListener('input',suggest);        
         function suggest(){
             console.log(document.getElementById('input').value);
-            fetch('https://searchsuggestionapinodejs.com/suggest/' + encodeURIComponent(document.getElementById('input').value))
+            fetch('https://searchsuggestionsapi.onrender.com/suggest/' + encodeURIComponent(document.getElementById('input').value))
             .then(response => response.json())
             .then(data => {
             console.log(data);
@@ -299,3 +299,30 @@ document.getElementById('input').addEventListener('input',suggest);
             // render the bookmarks on page load
             renderBookmarks();
             
+
+
+            //Background 
+            const bgnumber = document.querySelectorAll('.image-holder').length;
+            const changebackground = document.getElementById('bgchange');
+            changebackground.addEventListener('click', function(e) {
+              console.log('changebackground');
+              localStorage.setItem('background', (Number(localStorage.getItem('background'))+1)%bgnumber);
+              renderBackground();
+            });
+
+            // Background Change
+            function renderBackground() {
+              console.log('rendering background');
+              const background = localStorage.getItem('background') || "0";
+              console.log(background);
+              if(background == ''){
+                background=1;
+                localStorage.setItem('background', background);
+              }
+              document.querySelectorAll('.image-holder').forEach(function(image) {
+                image.style.display = 'none';
+              });
+              document.getElementById('b'+background).style.display = 'block';
+            }
+
+            renderBackground();

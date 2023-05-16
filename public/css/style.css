@@ -14,7 +14,7 @@ html,body{
 }
 
 @media (max-width : 971px) {
-    body{
+    #b1{
         background: radial-gradient(circle at center, #194664,#0c1527, #000);
     }
     .page1{
@@ -63,7 +63,7 @@ html,body{
 }
 
 @media (min-width : 971px) {
-    body{
+    #b1{
         background: radial-gradient(circle at 75vw 50vh, #194664,#0c1527, #000);
     }
     .page1{
@@ -104,6 +104,16 @@ html,body{
     width: 100vw;
     overflow:hidden;
     position: absolute;
+}
+#b0{
+  background-image: url("/public/images/moonwallpaper.png");
+  object-fit: contain;
+  background-position: right center;
+  background-size: cover;
+}
+#b2{
+  background-image: url("/public/images/—Pngtree—beautiful cube pattern batik_3633077.png");
+  background: radial-gradient(circle at 75vw 50vh, #1a772b,#155b24, #111b13);
 }
 .leftpane{
     overflow: hidden;
@@ -589,6 +599,11 @@ p {
         }
       }
     
-
-
-  
+      /* Background changer button */
+      .bgchange{
+        margin: 0 0 1% 1%;
+        bottom: 0;
+        position: absolute;
+        background: transparent;
+        border: none;
+      }
