@@ -112,8 +112,7 @@ html,body{
   background-size: cover;
 }
 #b2{
-  background-image: url("/public/images/—Pngtree—beautiful cube pattern batik_3633077.png");
-  /* background-color: radial-gradient(circle at 75vw 50vh, #1a772b,#155b24, #111b13); */
+  background-image: url("/public/images/—Pngtree—beautiful cube pattern batik_3633077.png"), radial-gradient(circle at 75vw 50vh, #1a772b,#155b24, #111b13);
   background-color: #f2f2f2;
   background-repeat: no-repeat;
   background-size: cover;
