@@ -121,6 +121,11 @@ html,body{
     overflow: hidden;
     
 }
+.bookmark-name{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 75px;
+}
 .rightpane{
     overflow: hidden;
     display: flex;
