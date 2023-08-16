@@ -123,6 +123,7 @@ html,body{
 }
 .bookmark-name{
   text-overflow: ellipsis;
+	white-space: nowrap;
   overflow: hidden;
   max-width: 75px;
 }
