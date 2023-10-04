@@ -305,7 +305,7 @@ document.getElementById('input').addEventListener('input',suggest);
             const bgnumber = document.querySelectorAll('.image-holder').length;
             const changebackground = document.getElementById('bgchange');
             changebackground.addEventListener('click', function(e) {
-              console.log('changebackground');
+
               localStorage.setItem('background', (Number(localStorage.getItem('background'))+1)%bgnumber);
               renderBackground();
             });
@@ -313,7 +313,7 @@ document.getElementById('input').addEventListener('input',suggest);
             // Background Change
             function renderBackground() {
               console.log('rendering background');
-              const background = localStorage.getItem('background') || "0";
+              const background = localStorage.getItem('background') || "1";
               console.log(background);
               if(background == ''){
                 background=1;
