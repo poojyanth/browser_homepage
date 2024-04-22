@@ -3,6 +3,24 @@ const input = document.getElementById('input');
 const searchresults = document.getElementById('searchresults');
 const searchbutton = document.getElementById('searchbutton');
 
+document.addEventListener("DOMContentLoaded", function() {
+  // Focus on the input field when the page loads
+  document.getElementById("input").focus();
+
+  // Submit the form when Enter key is pressed
+  document.getElementById("input").addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+      e.preventDefault(); // Prevent default form submission
+      var text = input.value.trim();
+      if (text !== "") {
+        window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(text);
+      }
+    }
+  });
+});
+
+
+
 searchbutton.addEventListener('click', function(e) {
     e.preventDefault();
     console.log('searchbutton');
